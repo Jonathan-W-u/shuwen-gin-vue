@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"shuwen-gin-vue/controller"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	fmt.Println("shuwen-gin-vue")
+	r := gin.Default()
+	r.GET("/ping", controller.Ping)
+	// fmt.Println("shuwen-gin-vue")
+	r.Run()
 }
